@@ -1,0 +1,28 @@
+.collapse ul li a
+{
+    color:#fff;
+}
+.logo
+{
+    width:70px;
+    height: 70px;
+}
+.navbar-item a
+{
+    text-decoration: none;
+}
+#navbar{
+    overflow: hidden;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .user-form
+  {
+      padding-top: 60px;
+  }
+  .sticky + .user-form {
+    padding-top: 60px;
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark p-0" id="navbar" th:fragment="header">
+    <!--Brand-->
+    <a class="navbar-brand p-0" href="#"><img th:src="@{images/logo.png}" alt="logo" class="logo"></a>
+    
+    <!-- Toggler/Collapsible Button-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="navbar-item active px-3">
+                <a href="user-list.html" class="navbar-link">Home</a>
+            </li>
+            <li class="navbar-item  dropdown px-3">
+                <a href="#" class="navbar-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Service</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">User Register</a>
+                    <a class="dropdown-item" href="#">User Register</a>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </div>
+            </li>
+            <li class="navbar-item disabled px-3">
+                <a href="#" class="navbar-link">Contact us</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
